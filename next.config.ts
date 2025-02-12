@@ -5,6 +5,8 @@ const nextConfig={
   swcMinify:true,
   images:{
     domains:['cdn.dummyjson.com'],
+    
   },
+  
 };
 module.exports=nextConfig;

@@ -34,19 +34,19 @@ export default async function ProductPage({ params }: { params: { id: string } }
     <div className="container m-auto flex flex-row">
      <div className="basis-1/2 text-center">
       <Image src={product.thumbnail} alt={product.title} width={500} height={200}/></div>
-      <div className="basis-1/2 ">
-       <p className="text-5xl font-bold font-mono mb-9">{product.title}</p>
-      <p className="text-sm py-3 my-4">{product.description}</p>
-      <p className="text-3xl font-bold my-4">{product.price} $</p>
+      <div className="basis-1/2 md:mr-1 mr-3 ">
+       <p className="md:text-5xl text-xl font-bold font-mono mb-9">{product.title}</p>
+      <p className="md:text-sm text-xs py-3 my-4">{product.description}</p>
+      <p className="md:text-3xl text-xl font-bold my-4">{product.price} $</p>
       <div className="flex flex-row my-4  ">
-        <p className="text-start basis-1/2 font-mono">Brand</p>
-      <p className="text-end basis-1/2 font-bold">{product.brand}</p></div>
+        <p className="text-start basis-1/2 font-mono text-sm md:text-base">Brand</p>
+      <p className="text-end basis-1/2 font-bold text-sm md:text-base">{product.brand}</p></div>
                     <div className="flex flex-row my-4 ">
-                      <p  className="text-start basis-1/2 font-mono">WarrantyInformation</p>
-                      <p className="text-end basis-1/2 font-bold">{product.warrantyInformation}</p></div>
+                      <p  className="text-start basis-1/2 font-mono text-sm md:text-base">WarrantyInformation</p>
+                      <p className="text-end basis-1/2 font-bold  text-sm md:text-base">{product.warrantyInformation}</p></div>
                     <div className="flex flex-row my-4 ">
-                      <p className="text-start basis-1/2 font-mono">ShippingInformation</p>
-                      <p className="text-end basis-1/2 font-bold">{product.shippingInformation}</p></div>
+                      <p className="text-start basis-1/2 font-mono text-sm md:text-base">ShippingInformation</p>
+                      <p className="text-end basis-1/2 font-bold text-sm md:text-base">{product.shippingInformation}</p></div>
       <Add product={product}/>
       </div>
     </div>

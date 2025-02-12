@@ -10,9 +10,11 @@ import img2 from "./../../../public/img/image2 (1).jpeg"
 import Slider from "./../component/Slider";
 import { useRef } from "react"
 export default function HomePage(){
-    const targetRef= useRef(null);
+    const targetRef= useRef<HTMLDivElement>(null);
     const scrollToComponent=()=>{
+        if(targetRef.current){
             targetRef.current.scrollIntoView({behavior:"smooth"});
+        }
         };
     return(
         <div className="container  mt-4">

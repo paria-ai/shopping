@@ -17,11 +17,12 @@ interface CartItem extends Product{
 }
 interface CartAction {
     type:string
+     //eslint-disable-next-line @typescript-eslint/no-explicit-any
     payload?:any
 }
 
 
-const initialCart:CartItem= localStorage.getItem("cart")?JSON.parse(localStorage.getItem("cart")as string):[];
+const initialCart:CartItem[]= localStorage.getItem("cart")?JSON.parse(localStorage.getItem("cart")as string):[];
 
 const cartReducer=(state:CartItem[],action:CartAction):CartItem[]=>{
     switch(action.type){

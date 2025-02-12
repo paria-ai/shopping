@@ -15,8 +15,8 @@ interface Product{
 export default function Add({product}:{product:Product}){
     const {addToCart}=useContext(ProductsContext)!;
     return(
-        <div>
-            <button className="w-full bg-sabz py-3 mt-5" onClick={()=>addToCart(product)}>Add To Cart</button>
+        <div> 
+            <button className="w-full bg-sabz py-3 mt-5 text-kerem hover:text-meshki" onClick={()=>addToCart(product)}>Add To Cart</button>
         </div>
     )
 }
