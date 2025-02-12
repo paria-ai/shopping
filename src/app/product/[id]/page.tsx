@@ -12,6 +12,11 @@ interface Product {
     warrantyInformation:string;
     shippingInformation:string;
 }
+interface PageProps{
+  params:{
+    id:string;
+  };
+}
 
 
 async function getProduct(id: string): Promise<Product | null> {
@@ -25,7 +30,7 @@ async function getProduct(id: string): Promise<Product | null> {
   }
 }
 
-export default async function ProductPage({ params }: { params: { id: string } }) {
+export default async function ProductPage({ params }: PageProps) {
   const product = await getProduct(params.id);
 
   if (!product) return notFound(); 
