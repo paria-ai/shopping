@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+
 import Image from "next/image"
 import Add from "@/app/component/Add";
 
@@ -31,9 +31,11 @@ async function getProduct(id: string): Promise<Product | null> {
 }
 
 export default async function ProductPage({ params }: PageProps) {
+  console.log("Params:",params);
   const product = await getProduct(params.id);
+  console.log("Product:",product);
 
-  if (!product) return notFound(); 
+  if (!product) return <p>Product Not Found</p>; 
 
   return (
     <div className="container m-auto flex flex-row">
