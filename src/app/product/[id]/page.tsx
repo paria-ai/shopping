@@ -23,7 +23,7 @@ async function getProduct(id: string): Promise<Product | null> {
   try {
     const res = await fetch(`https://dummyjson.com/products/${id}`);
     if (!res.ok) return null;
-    return res.json();
+    return (await res.json()) as Product;
   } catch (error) {
     console.error("Error fetching product:", error);
     return null;
