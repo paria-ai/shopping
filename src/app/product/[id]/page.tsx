@@ -21,7 +21,7 @@ interface PageProps{
 
 async function getProduct(id: string): Promise<Product | null> {
   try {
-    const res = await fetch(`https://dummyjson.com/products/${id}`);
+    const res = await fetch(`https://dummyjson.com/products/${id}`,{next:{revalidate:0}});
     if (!res.ok) return null;
     return (await res.json()) as Product;
   } catch (error) {
