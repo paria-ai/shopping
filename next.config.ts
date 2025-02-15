@@ -7,9 +7,7 @@ const nextConfig={
     domains:['cdn.dummyjson.com'],
     
   },
-  experimental:{
-  runtime:"nodejs",
-  }
+ 
   
 };
 module.exports=nextConfig;
